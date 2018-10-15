@@ -12,28 +12,28 @@ wo = 2*np.pi/T # wo = 1
 
 # time
 
-t = np.arange(0,10,0.1) # Variable "t"
+t = np.arange(0,10,0.1) # time "t"
 
 # cos and cos²
 
-coseno = np.cos(2*np.pi*1/T*t)  # cos(wo.t)
+cosine = np.cos(2*np.pi*1/T*t)  # cos(wo.t)
 
-coseno_cuadrado = coseno * coseno  # cos²(t) = cos(t) * cos(t) 
+square_cosine = cosine * cosine  # cos²(t) = cos(t) * cos(t) 
 
 # Graphics
 
 plt.subplot(3, 1, 1)
-plt.plot(t, coseno, 'o-')
-plt.title('Serie de Fourier')
+plt.plot(t, cosine, 'o-')
+plt.title('Fourier Serie')
 plt.ylabel('Cos(t)')
 
 plt.subplot(3, 1, 2)
-plt.plot(t, coseno, 'o-')
+plt.plot(t, cosine, 'o-')
 plt.ylabel('Cos(t)')
 
 plt.subplot(3, 1, 3)
-plt.plot(t, coseno_cuadrado, '.-')
-plt.xlabel('tiempo (s)')
+plt.plot(t, square_cosine, '.-')
+plt.xlabel('time (s)')
 plt.ylabel('Cos(t)*Cos(t)')
 
 
